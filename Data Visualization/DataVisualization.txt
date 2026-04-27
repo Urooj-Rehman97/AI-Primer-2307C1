@@ -1,0 +1,3 @@
+MultiplePlots (ek outputki screen mmultiple graphs show hn)
+Basic Syntax: 
+plt.subplot(row, column,position)

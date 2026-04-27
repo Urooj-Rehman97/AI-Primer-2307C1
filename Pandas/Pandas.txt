@@ -1,0 +1,17 @@
+Pandas? Python ki library (data analysis)
+(Handle Excel type data)
+Pandas (Python ka Excel)
+Pandas read csv files (Comma Separated Values)
+
+Pandas k 2 main data strutures hn:
+1.Series  (1D data)
+2.Dataframe Table format (Rows and Column)
+
+Step 1: Install Pandas using this command (pip install pandas)
+Step 2: Import Pandas (import pandas as pd) pd nick name h
+
+Data Dekhny k Functions
+head() (first 5 rows show krta h)
+tail() (last 5 rows show krta h)
+info() (dataset ka structure btata h example: Columns, Data types, Null Values)
+describe() (Numerical data ki summary data h example: Mean, Min, Max, Std)

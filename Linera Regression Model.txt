@@ -1,0 +1,80 @@
+📌 STEP 6: Features (X) & Target (y)
+X = df.drop("Purchased", axis=1)
+y = df["Purchased"]
+
+📌 STEP 7: Train-Test Split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.25, random_state=42
+)
+
+STEP 8: Feature Scaling
+scaler = StandardScaler()
+
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+📌 STEP 9: Final Output Check
+print("X Train Data:\n", X_train)
+print("\nX Test Data:\n", X_test)
+print("\nY Train Data:\n", y_train.values)
+print("\nY Test Data:\n", y_test.values)
+
+
+# STEP 1: Libraries
+import pandas as pd
+import numpy as np
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+
+# STEP 2: Dataset
+data = {
+    "Age": [25, 30, 35, 40, 22, 28, 32, 45],
+    "Salary": [50000, 60000, 55000, 80000, 45000, 52000, 58000, 90000],
+    "Gender": ["Male", "Female", "Female", "Male", "Male", "Female", "Male", "Female"],
+    "City": ["Karachi", "Lahore", "Karachi", "Islamabad", "Lahore", "Karachi", "Lahore", "Islamabad"],
+    "Purchased": [0, 1, 0, 1, 0, 1, 0, 1]
+}
+
+df = pd.DataFrame(data)
+
+
+# STEP 3: Encoding
+le = LabelEncoder()
+df["Gender"] = le.fit_transform(df["Gender"])
+
+df = pd.get_dummies(df, columns=["City"])
+
+
+# STEP 4: Split X and y
+X = df.drop("Purchased", axis=1)
+y = df["Purchased"]
+
+
+# STEP 5: Train-Test Split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.25, random_state=42
+)
+
+
+# STEP 6: Scaling
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+
+# STEP 7: Model Training
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+
+# STEP 8: Prediction
+y_pred = model.predict(X_test)
+
+
+# STEP 9: Accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)

@@ -1,0 +1,4 @@
+WebScrapping means kisi website s python k zariye data extract krna (copy paste krna apny pas lekr ana)
+libraries:
+requests (pip install requests) \\website koaccess krny kliye use hoti handling
+beautifulSoup (pip install beautifulsoup4) \\data extract krny kliye use hoti h
