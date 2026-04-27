@@ -1,0 +1,9 @@
+1. Install Python (download and install)
+2. install Numpy
+3. Pandas
+4. Matplotlib
+5. Seaborn
+6. sckitleran 
+7. MiniConda (Download and install)
+5. Jupyter
+6. TensorFlow (Keras) 
