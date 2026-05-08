@@ -11,7 +11,7 @@ x = np.array([[1],[2],[3],[4],[5],[6],[7],[8]] )
 y = np.array([0,0,0,1,1,1,1,1] ) 
 
 #Step 3
-model = RandomForestClassifier(n_estimators = 5, random_state = 42)  #n_estimators kitny trees bnyengy yeh define krta h or randomstate outputstate ko balancerkhta
+model = RandomForestClassifier(n_estimators = 5, random_state = 42)  #n_estimators kitny trees bnyengy yeh define krta h or randomstate outputstate ko balance rkhta
 
 #Step 4
 model.fit(x,y)
