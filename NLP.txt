@@ -1,0 +1,7 @@
+NLP (Natural Language PreProcessing)
+"Hello!!!!!! How Are You???????????"
+
+Data Cleaning (Remove Special Characters)
+Tokenization (Break in words) ["hello", "How","Are","You"]
+Lemmatization (find Root word) (running, run, runs)
+Text Classification (spam / Not Spam)
